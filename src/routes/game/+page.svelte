@@ -2,6 +2,7 @@
 	import Icon from '@iconify/svelte';
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
+	import SelectNum from '$lib/SelectNum.svelte';
 
 	let mode: 'computer' | 'friend' | null = null;
     let step = 0
@@ -15,9 +16,7 @@
 	<div class="w-full h-full">
 		<h2 class="text-xl">{mode}</h2>
         {#if step === 0}
-            <div>
-                <p>Enter your</p>
-            </div>
+			<SelectNum />
         {/if}
 	</div>
 {/if}
